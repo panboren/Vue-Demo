@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <router-link to="/home">首页</router-link>
+    <router-link to="/detail">详情页</router-link>
+    <router-view></router-view>
+</div>
+<template id="detail">
+    <div>
+        <router-link to="/detail/profile">个人中心</router-link>
+        <router-link to="/detail/about">关于我</router-link>
+        <router-view></router-view>
+    </div>
+</template>
+
+<template id="Home">
+    <div @click="show">
+        Home
+    </div>
+</template>
+<template id="about">
+    <div @click="show">
+       {{message}}
+    </div>
+</template>
+<template id="profile">
+    <div @click="show">
+        {{message}}
+    </div>
+</template>
+
+
+<script src="./js/vue.js"></script>
+<script src="./js/vue-router.js"></script>
+<script type="module" src="./js/nain.js">
+</script>
+</body>
+</html>
